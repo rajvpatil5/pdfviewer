@@ -14,9 +14,9 @@ const CustomPdfViewer = () => {
     const plugins = defaultLayoutPlugin();
     return (
         <>
-            <div className="w-full h-[900px] flex justify-center items-center overflow-y-auto">
+            <div className="w-full h-[100dvh] pb-1 flex justify-center items-center overflow-y-auto">
                 <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
-                    <Viewer fileUrl={researchPaper} plugins={[plugins]} />
+                    <Viewer theme="dark" fileUrl={researchPaper} plugins={[plugins]} />
                 </Worker>
             </div>
         </>
